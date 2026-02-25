@@ -2,117 +2,238 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Mon Portfolio</title>
-<script>
-const CODE_SECRET = "Souadnoussy"; 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV - Mamadou Sanoussy Bah</title>
 
-window.onload = () => {
-    if (sessionStorage.getItem("accesPortfolio") === "true") {
-        afficherPortfolio();
-    }
-};
-
-function verifierCode() {
-    const code = document.getElementById("code").value;
-    const erreur = document.getElementById("erreur");
-
-    if (code === CODE_SECRET) {
-        sessionStorage.setItem("accesPortfolio", "true");
-        afficherPortfolio();
-    } else {
-        erreur.textContent = "Code incorrect";
-    }
-}
-
-function afficherPortfolio() {
-    document.getElementById("login").style.display = "none";
-    document.getElementById("portfolio").style.display = "block";
-}
-</script>
 <style>
-body {
-    font-family: Arial, sans-serif;
-    background-image: url("images/background.jpg");
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
-    color: white;
+    /* PHOTO SECTION */
+.photo-container {
     text-align: center;
-    padding: 50px;
+    margin-bottom: 25px;
 }
 
-.login-box {
-    background: rgba(0,0,0,0.6);
-    padding: 30px;
-    border-radius: 10px;
-    max-width: 400px;
-    margin: auto;
+.photo-container img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
 }
 
-input {
-    padding: 10px;
-    width: 80%;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: none;
-}
-
-button {
-    padding: 10px 20px;
-    font-weight: bold;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
 }
 
 .container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
+    display: flex;
     max-width: 1000px;
-    margin: auto;
+    margin: 40px auto;
+    background: #ffffff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
-.btn {
-    padding: 20px;
-    font-size: 16px;
-    background-color: white;
-    color: #1e3c72;
-    border-radius: 8px;
+/* SIDEBAR */
+.sidebar {
+    width: 30%;
+    background-color: #1e3a5f;
+    color: white;
+    padding: 30px;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin-top: 30px;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+}
+
+.sidebar p, 
+.sidebar li {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.sidebar ul {
+    padding-left: 18px;
+}
+
+.contact-link {
+    color: white;
     text-decoration: none;
-    font-weight: bold;
-    transition: transform 0.2s, background 0.3s;
 }
 
-.btn:hover {
-    background-color: #ffdd57;
-    transform: scale(1.05);
+.contact-link:hover {
+    text-decoration: underline;
 }
 
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid white;
-    margin: 15px auto;
-    display: block;
+/* MAIN */
+.main {
+    width: 70%;
+    padding: 40px;
 }
+
+.main h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #1e3a5f;
+}
+
+.main h3 {
+    color: #1e3a5f;
+    border-bottom: 2px solid #1e3a5f;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+.main p, 
+.main li {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+ul {
+    margin-top: 10px;
+}
+
+/* PRINT OPTIMIZATION */
+@media print {
+    body {
+        background: white;
+    }
+    .container {
+        box-shadow: none;
+        margin: 0;
+    }
+}
+
 </style>
 </head>
+
 <body>
 
-<div id="login" class="login-box">
-    <h2>Accès au portfolio</h2>
-    <p>Veuillez entrer le code d'accès</p>
-    <input type="password" id="code" placeholder="Code d'accès"> 
-    <br>
-    <button onclick="verifierCode()">Entrer</button>
-    <p id="erreur"></p>
-</div>
+<div class="container">
 
-<div id="portfolio" style="display:none;">
-    <h1>BIENVENUE </h1>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <!-- SECTION PHOTO -->
+        <div class="photo-container">
+          <img src="photo.jpg" alt="Photo de Mamadou Sanoussy Bah">
+        </div>
+        <h2>Coordonnées</h2>
+
+        <p>📞 <a href="tel:+18733555328" class="contact-link">
+        +1 873 355 5328</a></p>
+
+        <p>✉️ <a href="mailto:mamadousanoussybah01@gmail.com" class="contact-link">
+        mamadousanoussybah01@gmail.com</a></p>
+
+        <p>🌐 <a href="https://mamadousanoussybah.github.io" 
+        target="_blank" class="contact-link">
+        mamadousanoussybah.github.io</a></p>
+
+        <p>🔗 <a href="https://linkedin.com/in/mamadou-sanoussy-bah-ab1a8b2a7" 
+        target="_blank" class="contact-link">
+        linkedin.com/in/mamadou-sanoussy-bah-ab1a8b2a7</a></p>
+
+        <h2>Compétences techniques</h2>
+        <ul>
+            <li><strong>Langages :</strong> SQL, PL/SQL, Python, C++, Java, C#, ARM64</li>
+            <li><strong>Web :</strong> HTML, CSS, JavaScript</li>
+            <li><strong>Bases de données :</strong> Oracle, MySQL, SQLite</li>
+            <li><strong>Architecture :</strong> ARM64, Raspberry Pi Bare-metal, mémoire virtuelle</li>
+            <li><strong>Cloud :</strong> Azure DevOps, CI/CD, ARM Templates, WebApp, Blob Storage</li>
+            <li><strong>Sécurité :</strong> chiffrement, gestion mots de passe, stéganographie, scanning réseau</li>
+            <li><strong>Outils :</strong> Git, QEMU, Wireshark, Visual Studio, Oracle SQL Developer</li>
+        </ul>
+
+        <h2>Langues</h2>
+        <p>Français : Professionnel</p>
+        <p>Anglais : Débutant</p>
+
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+
+        <h1>Mamadou Sanoussy Bah</h1>
+        <p><strong>Étudiant en Informatique – Cybersécurité</strong></p>
+
+        <div class="section">
+            <h3>Profil professionnel</h3>
+            <p>
+                Étudiant en informatique avec expertise en bases de données, architecture système,
+                déploiement cloud et sécurité des applications. Capacité à concevoir, développer
+                et optimiser des solutions logicielles orientées vers la performance,
+                la sécurité et la qualité.
+            </p>
+        </div>
+
+        <div class="section">
+            <h3>Expériences de projets</h3>
+
+            <ul>
+                <li><strong>Bases de données avancées :</strong>
+                    Conception Oracle (UML, normalisation, contraintes),
+                    procédures stockées, vues SQL, optimisation via plans d’exécution,
+                    migration Oracle vers MySQL.
+                </li>
+
+                <li><strong>Architecture & Systèmes embarqués :</strong>
+                    Algorithmes ARM64 (Booth, IEEE 754), Bare-metal Raspberry Pi,
+                    multithreading, gestion mémoire virtuelle et prévention des deadlocks.
+                </li>
+
+                <li><strong>Déploiement Cloud :</strong>
+                    ASP.NET Core sur Azure avec CI/CD,
+                    ARM Templates, Key Vault, environnements production/staging.
+                </li>
+
+                <li><strong>Sécurité & Réseaux :</strong>
+                    Gestionnaire de mots de passe chiffré (Python),
+                    scanner TCP multithread,
+                    stéganographie PNG,
+                    analyse HTTP/DNS avec Wireshark.
+                </li>
+
+                <li><strong>Développement Web & Mobile :</strong>
+                    Jeu Snake Android (Java, SQLite),
+                    chat communautaire,
+                    CV en ligne,
+                    interfaces responsives modernes.
+                </li>
+
+                <li><strong>OOP & Structures de données :</strong>
+                    Classes, héritage, polymorphisme, encapsulation,
+                    listes, piles, files, arbres, graphes,
+                    tables de hachage.
+                </li>
+
+                <li><strong>Marketing numérique & Éthique :</strong>
+                    Audit SEO, analyse performance digitale,
+                    protection des données, intégrité et impact social.
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Formation</h3>
+            <p>
+                <strong>Baccalauréat en Informatique – Cybersécurité (En cours)</strong><br>
+                Université du Québec à Chicoutimi<br>
+                2024 – 2026
+            </p>
+        </div>
+
+    </div>
+
+</div>
+ <h1>BIENVENUE </h1>
     <h2>VEUILLEZ SELLECTIONNER UN PROJET</h2>
 
     <img src="images/photo.jpg" alt="Photo de profil" class="profile-pic">
@@ -137,3 +258,4 @@ button {
 
 </body>
 </html>
+    
