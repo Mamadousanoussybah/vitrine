@@ -4,142 +4,51 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CV - Mamadou Sanoussy Bah</title>
-
 <style>
-    /* PHOTO SECTION */
-.photo-container {
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-.photo-container img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid white;
-}
-
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f2f2f2;
-}
-
-.container {
-    display: flex;
-    max-width: 1000px;
-    margin: 40px auto;
-    background: #ffffff;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-}
+body { margin:0; font-family: Arial, Helvetica, sans-serif; background-color: #f2f2f2; }
+.container { max-width:1000px; margin:40px auto; background:#fff; box-shadow:0 0 15px rgba(0,0,0,0.1); padding:0; }
 
 /* SIDEBAR */
-.sidebar {
-    width: 30%;
-    background-color: #1e3a5f;
-    color: white;
-    padding: 30px;
-}
-
-.sidebar h2 {
-    font-size: 18px;
-    margin-top: 30px;
-    border-bottom: 1px solid white;
-    padding-bottom: 5px;
-}
-
-.sidebar p, 
-.sidebar li {
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-.sidebar ul {
-    padding-left: 18px;
-}
-
-.contact-link {
-    color: white;
-    text-decoration: none;
-}
-
-.contact-link:hover {
-    text-decoration: underline;
-}
+.sidebar { width:30%; background-color:#1e3a5f; color:white; padding:30px; float:left; box-sizing:border-box; height:100%; }
+.sidebar h2 { font-size:18px; margin-top:30px; border-bottom:1px solid white; padding-bottom:5px; }
+.sidebar p, .sidebar li { font-size:14px; line-height:1.6; }
+.sidebar ul { padding-left:18px; }
+.contact-link { color:white; text-decoration:none; }
+.contact-link:hover { text-decoration:underline; }
+.photo-container { text-align:center; margin-bottom:25px; }
+.photo-container img { width:140px; height:140px; border-radius:50%; object-fit:cover; border:4px solid white; }
 
 /* MAIN */
-.main {
-    width: 70%;
-    padding: 40px;
-}
+.main { width:70%; padding:40px; float:left; box-sizing:border-box; }
+.main h1 { margin:0; font-size:28px; color:#1e3a5f; }
+.main h3 { color:#1e3a5f; border-bottom:2px solid #1e3a5f; padding-bottom:5px; margin-top:30px; }
+.section { margin-bottom:20px; }
 
-.main h1 {
-    margin: 0;
-    font-size: 28px;
-    color: #1e3a5f;
-}
+/* PORTFOLIO VIEW */
+#portfolio-view { display:none; text-align:center; padding:40px; }
+.projects-container { display:flex; flex-wrap:wrap; justify-content:center; gap:15px; }
+.btn { background-color:#1e3a5f; color:white; padding:10px 18px; text-decoration:none; border-radius:5px; font-size:14px; opacity:0; transform:translateY(20px); transition:0.5s; }
+.btn:hover { background-color:#16304d; transform:translateY(-2px); }
 
-.main h3 {
-    color: #1e3a5f;
-    border-bottom: 2px solid #1e3a5f;
-    padding-bottom: 5px;
-    margin-top: 30px;
-}
-
-.main p, 
-.main li {
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-.section {
-    margin-bottom: 20px;
-}
-
-ul {
-    margin-top: 10px;
-}
-
-/* PRINT OPTIMIZATION */
-@media print {
-    body {
-        background: white;
-    }
-    .container {
-        box-shadow: none;
-        margin: 0;
-    }
-}
-
+/* BACK BUTTON */
+.back-btn { display:inline-block; margin-top:20px; padding:10px 20px; background:#1e3a5f; color:white; border-radius:5px; text-decoration:none; }
+.back-btn:hover { background:#16304d; }
 </style>
 </head>
-
 <body>
 
-<div class="container">
-
+<!-- CV VIEW -->
+<div id="cv-view" class="container">
     <!-- SIDEBAR -->
     <div class="sidebar">
-        <!-- SECTION PHOTO -->
         <div class="photo-container">
-          <img src="photo.jpg" alt="Photo de Mamadou Sanoussy Bah">
+            <img src="photo.jpg" alt="Photo de Mamadou Sanoussy Bah">
         </div>
         <h2>Coordonnées</h2>
-
-        <p>📞 <a href="tel:+18733555328" class="contact-link">
-        +1 873 355 5328</a></p>
-
-        <p>✉️ <a href="mailto:mamadousanoussybah01@gmail.com" class="contact-link">
-        mamadousanoussybah01@gmail.com</a></p>
-
-        <p>🌐 <a href="https://mamadousanoussybah.github.io" 
-        target="_blank" class="contact-link">
-        mamadousanoussybah.github.io</a></p>
-
-        <p>🔗 <a href="https://linkedin.com/in/mamadou-sanoussy-bah-ab1a8b2a7" 
-        target="_blank" class="contact-link">
-        linkedin.com/in/mamadou-sanoussy-bah-ab1a8b2a7</a></p>
+        <p>📞 <a href="tel:+18733555328" class="contact-link">+1 873 355 5328</a></p>
+        <p>✉️ <a href="mailto:mamadousanoussybah01@gmail.com" class="contact-link">mamadousanoussybah01@gmail.com</a></p>
+        <p>🌐 <a href="#" id="github-link" class="contact-link">Portfolio GitHub</a></p>
+        <p>🔗 <a href="https://linkedin.com/in/mamadou-sanoussy-bah-ab1a8b2a7" target="_blank" class="contact-link">LinkedIn</a></p>
 
         <h2>Compétences techniques</h2>
         <ul>
@@ -155,107 +64,87 @@ ul {
         <h2>Langues</h2>
         <p>Français : Professionnel</p>
         <p>Anglais : Débutant</p>
-
     </div>
 
     <!-- MAIN -->
     <div class="main">
-
         <h1>Mamadou Sanoussy Bah</h1>
         <p><strong>Étudiant en Informatique – Cybersécurité</strong></p>
 
         <div class="section">
             <h3>Profil professionnel</h3>
-            <p>
-                Étudiant en informatique avec expertise en bases de données, architecture système,
-                déploiement cloud et sécurité des applications. Capacité à concevoir, développer
-                et optimiser des solutions logicielles orientées vers la performance,
-                la sécurité et la qualité.
-            </p>
+            <p>Étudiant en informatique avec expertise en bases de données, architecture système, déploiement cloud et sécurité. Capacité à concevoir, développer et optimiser des solutions orientées vers la performance, la sécurité et la qualité.</p>
         </div>
 
         <div class="section">
             <h3>Expériences de projets</h3>
-
             <ul>
-                <li><strong>Bases de données avancées :</strong>
-                    Conception Oracle (UML, normalisation, contraintes),
-                    procédures stockées, vues SQL, optimisation via plans d’exécution,
-                    migration Oracle vers MySQL.
-                </li>
-
-                <li><strong>Architecture & Systèmes embarqués :</strong>
-                    Algorithmes ARM64 (Booth, IEEE 754), Bare-metal Raspberry Pi,
-                    multithreading, gestion mémoire virtuelle et prévention des deadlocks.
-                </li>
-
-                <li><strong>Déploiement Cloud :</strong>
-                    ASP.NET Core sur Azure avec CI/CD,
-                    ARM Templates, Key Vault, environnements production/staging.
-                </li>
-
-                <li><strong>Sécurité & Réseaux :</strong>
-                    Gestionnaire de mots de passe chiffré (Python),
-                    scanner TCP multithread,
-                    stéganographie PNG,
-                    analyse HTTP/DNS avec Wireshark.
-                </li>
-
-                <li><strong>Développement Web & Mobile :</strong>
-                    Jeu Snake Android (Java, SQLite),
-                    chat communautaire,
-                    CV en ligne,
-                    interfaces responsives modernes.
-                </li>
-
-                <li><strong>OOP & Structures de données :</strong>
-                    Classes, héritage, polymorphisme, encapsulation,
-                    listes, piles, files, arbres, graphes,
-                    tables de hachage.
-                </li>
-
-                <li><strong>Marketing numérique & Éthique :</strong>
-                    Audit SEO, analyse performance digitale,
-                    protection des données, intégrité et impact social.
-                </li>
+                <li><strong>Bases de données avancées :</strong> Conception Oracle (UML, normalisation, contraintes), procédures stockées, vues SQL, optimisation via plans d’exécution, migration Oracle vers MySQL.</li>
+                <li><strong>Architecture & Systèmes embarqués :</strong> Algorithmes ARM64 (Booth, IEEE 754), Bare-metal Raspberry Pi, multithreading, gestion mémoire virtuelle et prévention des deadlocks.</li>
+                <li><strong>Déploiement Cloud :</strong> ASP.NET Core sur Azure avec CI/CD, ARM Templates, Key Vault, environnements production/staging.</li>
+                <li><strong>Sécurité & Réseaux :</strong> Gestionnaire de mots de passe chiffré (Python), scanner TCP multithread, stéganographie PNG, analyse HTTP/DNS avec Wireshark.</li>
+                <li><strong>Développement Web & Mobile :</strong> Jeu Snake Android (Java, SQLite), chat communautaire, CV en ligne, interfaces responsives modernes.</li>
+                <li><strong>OOP & Structures de données :</strong> Classes, héritage, polymorphisme, encapsulation, listes, piles, files, arbres, graphes, tables de hachage.</li>
+                <li><strong>Marketing numérique & Éthique :</strong> Audit SEO, analyse performance digitale, protection des données, intégrité et impact social.</li>
             </ul>
         </div>
 
         <div class="section">
             <h3>Formation</h3>
-            <p>
-                <strong>Baccalauréat en Informatique – Cybersécurité (En cours)</strong><br>
-                Université du Québec à Chicoutimi<br>
-                2024 – 2026
-            </p>
+            <p><strong>Baccalauréat en Informatique – Cybersécurité (En cours)</strong><br>
+            Université du Québec à Chicoutimi<br>
+            2024 – 2026</p>
         </div>
-
     </div>
-
 </div>
- <h1>BIENVENUE </h1>
-    <h2>VEUILLEZ SELLECTIONNER UN PROJET</h2>
 
-    <img src="images/photo.jpg" alt="Photo de profil" class="profile-pic">
-    <img src="images/background.jpg" alt="Photo de profil" class="profile-pic">
-
-    <div class="container">
-        <a class="btn" href="https://mamadousanoussybah.github.io/MarketingNumrique/" target="_blank">MarketingNumerique</a>
-        <a class="btn" href="https://mamadousanoussybah.github.io/InformatiqueMobil/" target="_blank">InformatiqueMobil</a>
-        <a class="btn" href="https://mamadousanoussybah.github.io/ProgrammationOrienteObjet/" target="_blank">ProgrammationOrienteObjet</a>
-        <a class="btn" href="https://mamadousanoussybah.github.io/ReseauDordinateur/" target="_blank">ReseauDordinateur</a>
-        <a class="btn" href="https://mamadousanoussybah.github.io/BaseDeDonnee/" target="_blank">BaseDeDonnee</a>
-        <a class="btn" href="https://mamadousanoussybah.github.io/ConceptionEtDeveloppementWeb/" target="_blank">ConceptionEtDeveloppementWeb</a>
-        <a class="btn" href="https://mamadousanoussybah.github.io/SecuriteDesReseauxEtDuWeb/" target="_blank">SecuriteDesReseauxEtDuWeb</a>
-        <a class="btn" href="https://mamadousanoussybah.github.io/EthiqueInformatique/" target="_blank">EthiqueInformatique</a>
-        <a class="btn" href="https://mamadousanoussybah.github.io/StructureDeDonnee/" target="_blank">StructureDeDonnee</a>
-        <a class="btn" href="https://mamadousanoussybah.github.io/SystemeDexploitation/" target="_blank">SystemeDexploitation</a>
-        <a class="btn" href="https://mamadousanoussybah.github.io/ArchitectureDordinateur/" target="_blank">ArchitectureDordinateur</a>
-        <a class="btn" href="https://mamadousanoussybah.github.io/Deployementdapplication/" target="_blank">Deployementdapplication</a>
+<!-- PORTFOLIO VIEW -->
+<div id="portfolio-view">
+    <h1>Bienvenue</h1>
+    <h2>Veuillez sélectionner un projet</h2>
+    <div class="projects-container">
+        <a class="btn" href="https://mamadousanoussybah.github.io/MarketingNumrique/" target="_blank">Marketing Numérique</a>
+        <a class="btn" href="https://mamadousanoussybah.github.io/InformatiqueMobil/" target="_blank">Informatique Mobile</a>
+        <a class="btn" href="https://mamadousanoussybah.github.io/ProgrammationOrienteObjet/" target="_blank">POO</a>
+        <a class="btn" href="https://mamadousanoussybah.github.io/ReseauDordinateur/" target="_blank">Réseaux</a>
+        <a class="btn" href="https://mamadousanoussybah.github.io/BaseDeDonnee/" target="_blank">Base de Données</a>
+        <a class="btn" href="https://mamadousanoussybah.github.io/SecuriteDesReseauxEtDuWeb/" target="_blank">Sécurité</a>
+        <a class="btn" href="https://mamadousanoussybah.github.io/SystemeDexploitation/" target="_blank">Systèmes</a>
+        <a class="btn" href="https://mamadousanoussybah.github.io/ArchitectureDordinateur/" target="_blank">Architecture</a>
+        <a class="btn" href="https://mamadousanoussybah.github.io/Deployementdapplication/" target="_blank">Déploiement</a>
         <a class="btn" href="https://mamadousanoussybah.github.io/Snake/" target="_blank">Snake</a>
     </div>
+    <a href="#" id="back-btn" class="back-btn">Retour au CV</a>
 </div>
+
+<script>
+// Basculer vers portfolio
+document.getElementById('github-link').addEventListener('click', function(e){
+    e.preventDefault();
+    document.getElementById('cv-view').style.display = 'none';
+    document.getElementById('portfolio-view').style.display = 'block';
+    
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach((btn,index)=>{
+        setTimeout(()=>{
+            btn.style.opacity='1';
+            btn.style.transform='translateY(0)';
+        },index*150);
+    });
+});
+
+// Retour au CV
+document.getElementById('back-btn').addEventListener('click', function(e){
+    e.preventDefault();
+    document.getElementById('portfolio-view').style.display = 'none';
+    document.getElementById('cv-view').style.display = 'flex';
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(btn => {
+        btn.style.opacity = '0';
+        btn.style.transform = 'translateY(20px)';
+    });
+});
+</script>
 
 </body>
 </html>
-    
