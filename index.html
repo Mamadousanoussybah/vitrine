@@ -1,103 +1,347 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV - Mamadou Sanoussy Bah</title>
-<style>
-body { margin:0; font-family: Arial, Helvetica, sans-serif; background-color: #f2f2f2; }
-.container { max-width:1000px; margin:40px auto; background:#fff; box-shadow:0 0 15px rgba(0,0,0,0.1); padding:0; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Mamadou Sanoussy Bah</title>
 
-/* SIDEBAR */
-.sidebar { width:30%; background-color:#1e3a5f; color:white; padding:30px; float:left; box-sizing:border-box; height:100%; }
-.sidebar h2 { font-size:18px; margin-top:30px; border-bottom:1px solid white; padding-bottom:5px; }
-.sidebar p, .sidebar li { font-size:14px; line-height:1.6; }
-.sidebar ul { padding-left:18px; }
-.contact-link { color:white; text-decoration:none; }
-.contact-link:hover { text-decoration:underline; }
-.photo-container { text-align:center; margin-bottom:25px; }
-.photo-container img { width:140px; height:140px; border-radius:50%; object-fit:cover; border:4px solid white; }
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f2f2f2;
+        }
 
-/* MAIN */
-.main { width:70%; padding:40px; float:left; box-sizing:border-box; }
-.main h1 { margin:0; font-size:28px; color:#1e3a5f; }
-.main h3 { color:#1e3a5f; border-bottom:2px solid #1e3a5f; padding-bottom:5px; margin-top:30px; }
-.section { margin-bottom:20px; }
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: #fff;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            display: flex;
+            min-height: 100vh;
+        }
 
-/* PORTFOLIO VIEW */
-#portfolio-view { display:none; text-align:center; padding:40px; }
-.projects-container { display:flex; flex-wrap:wrap; justify-content:center; gap:15px; }
-.btn { background-color:#1e3a5f; color:white; padding:10px 18px; text-decoration:none; border-radius:5px; font-size:14px; opacity:0; transform:translateY(20px); transition:0.5s; }
-.btn:hover { background-color:#16304d; transform:translateY(-2px); }
+        /* SIDEBAR */
+        .sidebar {
+            width: 30%;
+            background-color: #1e3a5f;
+            color: white;
+            padding: 30px;
+            box-sizing: border-box;
+        }
 
-/* BACK BUTTON */
-.back-btn { display:inline-block; margin-top:20px; padding:10px 20px; background:#1e3a5f; color:white; border-radius:5px; text-decoration:none; }
-.back-btn:hover { background:#16304d; }
-</style>
+        .sidebar h2 {
+            font-size: 18px;
+            margin-top: 30px;
+            border-bottom: 1px solid white;
+            padding-bottom: 5px;
+        }
+
+        .sidebar p,
+        .sidebar li {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .sidebar ul {
+            padding-left: 18px;
+        }
+
+        .contact-link {
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+
+        .photo-container {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .photo-container img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+        }
+
+        /* MAIN */
+        .main {
+            width: 70%;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+
+        .main h1 {
+            margin: 0;
+            font-size: 28px;
+            color: #1e3a5f;
+        }
+
+        .main h3 {
+            color: #1e3a5f;
+            border-bottom: 2px solid #1e3a5f;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section p,
+        .section li {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* PORTFOLIO VIEW */
+        #portfolio-view {
+            display: none;
+            min-height: 100vh;
+            text-align: center;
+            padding: 60px 30px;
+            background: #f2f2f2;
+            box-sizing: border-box;
+        }
+
+        #portfolio-view h1 {
+            color: #1e3a5f;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        #portfolio-view h2 {
+            color: #333;
+            font-size: 21px;
+            margin-bottom: 35px;
+        }
+
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            background-color: #1e3a5f;
+            color: white;
+            padding: 14px 22px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 15px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: 0.5s;
+            min-width: 190px;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #16304d;
+            transform: translateY(-3px);
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 35px;
+            padding: 12px 24px;
+            background: #1e3a5f;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background: #16304d;
+        }
+
+        /* RESPONSIVE */
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                margin: 0;
+            }
+
+            .sidebar,
+            .main {
+                width: 100%;
+            }
+
+            .main {
+                padding: 25px;
+            }
+
+            .projects-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 90%;
+                max-width: 350px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<!-- CV VIEW -->
-<div id="cv-view" class="container">
-    <!-- SIDEBAR -->
-    <div class="sidebar">
-        <div class="photo-container">
-            <img src="images/photo.jpg" alt="Photo de Mamadou Sanoussy Bah">
+    <!-- CV VIEW -->
+    <div id="cv-view" class="container">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <div class="photo-container">
+                <img src="images/photo.jpg" alt="Photo de Mamadou Sanoussy Bah">
+            </div>
+
+            <h2>Coordonnées</h2>
+            <p>📞 <a href="tel:+18733555328" class="contact-link">+1 873 355 5328</a></p>
+            <p>✉️ <a href="mailto:mamadousanoussybah01@gmail.com" class="contact-link">mamadousanoussybah01@gmail.com</a></p>
+            <p>🌐 <a href="#" id="github-link" class="contact-link">Portfolio GitHub</a></p>
+            <p>🔗 <a href="https://linkedin.com/in/mamadou-sanoussy-bah-ab1a8b2a7" target="_blank" class="contact-link">LinkedIn</a></p>
+
+            <h2>Compétences</h2>
+            <ul>
+                <li>HTML / CSS</li>
+                <li>JavaScript</li>
+                <li>Python / Flask</li>
+                <li>Java</li>
+                <li>Flutter / Dart</li>
+                <li>GitHub</li>
+                <li>Réseaux informatiques</li>
+                <li>Cybersécurité</li>
+            </ul>
+
+            <h2>Langues</h2>
+            <ul>
+                <li>Français</li>
+                <li>Anglais technique</li>
+            </ul>
         </div>
-        <h2>Coordonnées</h2>
-        <p>📞 <a href="tel:+18733555328" class="contact-link">+1 873 355 5328</a></p>
-        <p>✉️ <a href="mailto:mamadousanoussybah01@gmail.com" class="contact-link">mamadousanoussybah01@gmail.com</a></p>
-       <p>🌐 <a href="#" id="github-link" class="contact-link">Portfolio GitHub</a></p>
-        <p>🔗 <a href="https://linkedin.com/in/mamadou-sanoussy-bah-ab1a8b2a7" target="_blank" class="contact-link">LinkedIn</a></p>
 
-        
-<!-- PORTFOLIO VIEW -->
-<div id="portfolio-view">
-    <h1>Bienvenue</h1>
-    <h2>Veuillez sélectionner un projet</h2>
-    <div class="projects-container">
-        <a class="btn" href="https://mamadousanoussybah.github.io/MarketingNumrique/" target="_blank">Marketing Numérique</a>
-        <a class="btn" href="https://mamadousanoussybah.github.io/InformatiqueMobil/" target="_blank">Informatique Mobile</a>
-        <a class="btn" href="https://mamadousanoussybah.github.io/ProgrammationOrienteObjet/" target="_blank">POO</a>
-        <a class="btn" href="https://mamadousanoussybah.github.io/ReseauDordinateur/" target="_blank">Réseaux</a>
-        <a class="btn" href="https://mamadousanoussybah.github.io/BaseDeDonnee/" target="_blank">Base de Données</a>
-        <a class="btn" href="https://mamadousanoussybah.github.io/SecuriteDesReseauxEtDuWeb/" target="_blank">Sécurité</a>
-        <a class="btn" href="https://mamadousanoussybah.github.io/SystemeDexploitation/" target="_blank">Systèmes</a>
-        <a class="btn" href="https://mamadousanoussybah.github.io/ArchitectureDordinateur/" target="_blank">Architecture</a>
-        <a class="btn" href="https://mamadousanoussybah.github.io/Deployementdapplication/" target="_blank">Déploiement</a>
-        <a class="btn" href="https://mamadousanoussybah.github.io/Snake/" target="_blank">Snake</a>
+        <!-- MAIN CV -->
+        <div class="main">
+            <h1>Mamadou Sanoussy Bah</h1>
+            <p><strong>Étudiant en informatique — Cybersécurité</strong></p>
+
+            <div class="section">
+                <h3>Profil personnel</h3>
+                <p>
+                    Étudiant en baccalauréat en informatique — cybersécurité à l’Université du Québec à Chicoutimi.
+                    Je m’intéresse particulièrement à la sécurité des réseaux, au développement web, aux systèmes
+                    Windows/Linux et aux environnements numériques sécurisés. Motivé, organisé et rigoureux, je souhaite
+                    développer mes compétences dans un environnement professionnel.
+                </p>
+            </div>
+
+            <div class="section">
+                <h3>Formation</h3>
+                <p>
+                    <strong>Baccalauréat en informatique — Cybersécurité</strong><br>
+                    Université du Québec à Chicoutimi, Canada<br>
+                    En cours
+                </p>
+
+                <p>
+                    <strong>Diplôme en télécommunications</strong><br>
+                    Formation antérieure en télécommunications
+                </p>
+            </div>
+
+            <div class="section">
+                <h3>Projets académiques et personnels</h3>
+                <ul>
+                    <li>
+                        <strong>Portfolio GitHub :</strong> création de plusieurs projets web présentés sous forme de pages GitHub.
+                    </li>
+                    <li>
+                        <strong>Application mobile :</strong> développement d’une application avec Flutter et Firebase.
+                    </li>
+                    <li>
+                        <strong>Mini-SOC :</strong> projet de cybersécurité basé sur l’analyse de logs et la détection d’incidents.
+                    </li>
+                    <li>
+                        <strong>API Flask :</strong> développement d’une API REST avec Python.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Expériences et qualités</h3>
+                <ul>
+                    <li>Capacité d’apprentissage rapide</li>
+                    <li>Travail en équipe</li>
+                    <li>Sens de l’organisation</li>
+                    <li>Motivation à évoluer dans le domaine de l’informatique</li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <a href="#" id="back-btn" class="back-btn">Retour au CV</a>
-</div>
 
-<script>
-// Basculer vers portfolio
-document.getElementById('github-link').addEventListener('click', function(e){
-    e.preventDefault();
-    document.getElementById('cv-view').style.display = 'none';
-    document.getElementById('portfolio-view').style.display = 'block';
-    
-    const buttons = document.querySelectorAll('.btn');
-    buttons.forEach((btn,index)=>{
-        setTimeout(()=>{
-            btn.style.opacity='1';
-            btn.style.transform='translateY(0)';
-        },index*150);
-    });
-});
+    <!-- PORTFOLIO VIEW -->
+    <div id="portfolio-view">
+        <h1>Bienvenue sur mon portfolio</h1>
+        <h2>Veuillez sélectionner un projet</h2>
 
-// Retour au CV
-document.getElementById('back-btn').addEventListener('click', function(e){
-    e.preventDefault();
-    document.getElementById('portfolio-view').style.display = 'none';
-    document.getElementById('cv-view').style.display = 'flex';
-    const buttons = document.querySelectorAll('.btn');
-    buttons.forEach(btn => {
-        btn.style.opacity = '0';
-        btn.style.transform = 'translateY(20px)';
-    });
-});
-</script>
+        <div class="projects-container">
+            <a class="btn" href="https://mamadousanoussybah.github.io/MarketingNumrique/" target="_blank">Marketing Numérique</a>
+            <a class="btn" href="https://mamadousanoussybah.github.io/InformatiqueMobil/" target="_blank">Informatique Mobile</a>
+            <a class="btn" href="https://mamadousanoussybah.github.io/ProgrammationOrienteObjet/" target="_blank">POO</a>
+            <a class="btn" href="https://mamadousanoussybah.github.io/ReseauDordinateur/" target="_blank">Réseaux</a>
+            <a class="btn" href="https://mamadousanoussybah.github.io/BaseDeDonnee/" target="_blank">Base de Données</a>
+            <a class="btn" href="https://mamadousanoussybah.github.io/SecuriteDesReseauxEtDuWeb/" target="_blank">Sécurité</a>
+            <a class="btn" href="https://mamadousanoussybah.github.io/SystemeDexploitation/" target="_blank">Systèmes</a>
+            <a class="btn" href="https://mamadousanoussybah.github.io/ArchitectureDordinateur/" target="_blank">Architecture</a>
+            <a class="btn" href="https://mamadousanoussybah.github.io/Deployementdapplication/" target="_blank">Déploiement</a>
+            <a class="btn" href="https://mamadousanoussybah.github.io/Snake/" target="_blank">Snake</a>
+        </div>
+
+        <a href="#" id="back-btn" class="back-btn">Retour au CV</a>
+    </div>
+
+    <script>
+        const githubLink = document.getElementById('github-link');
+        const cvView = document.getElementById('cv-view');
+        const portfolioView = document.getElementById('portfolio-view');
+        const backBtn = document.getElementById('back-btn');
+        const buttons = document.querySelectorAll('.btn');
+
+        githubLink.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            cvView.style.display = 'none';
+            portfolioView.style.display = 'block';
+
+            buttons.forEach((btn, index) => {
+                setTimeout(() => {
+                    btn.style.opacity = '1';
+                    btn.style.transform = 'translateY(0)';
+                }, index * 120);
+            });
+        });
+
+        backBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            portfolioView.style.display = 'none';
+            cvView.style.display = 'flex';
+
+            buttons.forEach(btn => {
+                btn.style.opacity = '0';
+                btn.style.transform = 'translateY(20px)';
+            });
+        });
+    </script>
 
 </body>
 </html>
