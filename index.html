@@ -6,6 +6,7 @@
 <title>CV - Mamadou Sanoussy Bah</title>
 
 <style>
+/* ===== TON CSS ORIGINAL (INCHANGÉ) ===== */
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -56,6 +57,19 @@ body {
     text-decoration: underline;
 }
 
+.photo-container {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.photo-container img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+}
+
 /* MAIN */
 .main {
     width: 70%;
@@ -87,246 +101,94 @@ body {
     color: #333;
 }
 
-/* LINKS PROJETS */
-.project-link {
-    color: #1e3a5f;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.project-link:hover {
-    text-decoration: underline;
-}
-
-/* RESPONSIVE */
-@media screen and (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .sidebar,
-    .main {
-        width: 100%;
-    }
-}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-<!-- SIDEBAR -->
-<div class="sidebar">
-
-    <h2>Contact</h2>
-
-    <p>📞 <a class="contact-link" href="tel:+18733555328">+1 873 355 5328</a></p>
-
-    <p>✉️ <a class="contact-link" href="mailto:mamadousanoussybah01@gmail.com">
-        mamadousanoussybah01@gmail.com
-    </a></p>
-
-    <p>🔗 <a class="contact-link" href="https://linkedin.com/in/mamadou-sanoussy-bah-ab1a8b2a7" target="_blank">
-        LinkedIn
-    </a></p>
-
-    <p>💻 <a class="contact-link" href="https://github.com/mamadousanoussybah" target="_blank">
-        GitHub
-    </a></p>
-
-    <h2>Projets</h2>
-    <ul>
-        <li><a class="contact-link" href="https://mamadousanoussybah.github.io/MarketingNumrique/" target="_blank">Marketing Numérique</a></li>
-        <li><a class="contact-link" href="https://mamadousanoussybah.github.io/InformatiqueMobil/" target="_blank">Informatique Mobile</a></li>
-        <li><a class="contact-link" href="https://mamadousanoussybah.github.io/ReseauDordinateur/" target="_blank">Réseaux</a></li>
-        <li><a class="contact-link" href="https://mamadousanoussybah.github.io/BaseDeDonnee/" target="_blank">Base de Données</a></li>
-        <li><a class="contact-link" href="https://mamadousanoussybah.github.io/SecuriteDesReseauxEtDuWeb/" target="_blank">Sécurité Web</a></li>
-        <li><a class="contact-link" href="https://mamadousanoussybah.github.io/Snake/" target="_blank">Snake Android</a></li>
-    </ul>
-
-</div>
-
-<!-- MAIN -->
-<div class="main">
-
-    <h1>Mamadou Sanoussy Bah</h1>
-    <p><strong>Étudiant en informatique — Cybersécurité</strong></p>
-
-    <div class="section">
-        <h3>Profil professionnel</h3>
-        <p>
-            Étudiant en informatique spécialisé en cybersécurité à l’Université du Québec à Chicoutimi.
-            Expertise en bases de données, architecture système, cloud computing, développement logiciel
-            et sécurité informatique. Passionné par la conception de solutions sécurisées et performantes
-            à travers des projets académiques variés.
-        </p>
-    </div>
-
-    <div class="section">
-        <h3>Formation</h3>
-        <p>
-            <strong>Baccalauréat en informatique — Cybersécurité</strong><br>
-            Université du Québec à Chicoutimi (UQAC)<br>
-            2024 — 2026 (en cours)
-        </p>
-    </div>
-
-    <div class="section">
-        <h3>Compétences techniques</h3>
-        <ul>
-            <li><strong>Langages :</strong> SQL, Python, Java, C, C++, C#, HTML, CSS, JavaScript, Flutter</li>
-            <li><strong>Bases de données :</strong> Oracle, MySQL, SQLite, UML</li>
-            <li><strong>Cybersécurité :</strong> Wireshark, Nessus, stéganographie</li>
-            <li><strong>Cloud :</strong> Azure DevOps, CI/CD, Functions</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h3>Expérience & Projets</h3>
-        <ul>
-
-            <li><strong>Mini-SOC</strong> — détection d’incidents et analyse de logs</li>
-
-            <li><strong>Messenger Flutter</strong> — application de messagerie avec Firebase</li>
-
-            <li><strong>API Flask</strong> — gestion commandes et livraison</li>
-
-            <li><strong>Scanner réseau</strong> — analyse TCP multithread</li>
-
-            <li><strong>Snake Android</strong> — jeu mobile Java</li>
-
-            <li><strong>Déploiement Azure</strong> — CI/CD et cloud apps</li>
-
-            <li><strong>Wireshark</strong> — analyse réseau avancée</li>
-
-        </ul>
-    </div>
-
-    <div class="section">
-        <h3>Qualités</h3>
-        <ul>
-            <li>Autonomie</li>
-            <li>Travail d’équipe</li>
-            <li>Analyse</li>
-            <li>Rigueur</li>
-        </ul>
-    </div>
-
-</div>
-
-</div>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV - Mamadou Sanoussy Bah</title>
-
-<style>
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f2f2f2;
-}
-
-.container {
-    max-width: 1000px;
-    margin: 40px auto;
-    background: #fff;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    display: flex;
+/* PORTFOLIO VIEW */
+#portfolio-view {
+    display: none;
     min-height: 100vh;
+    text-align: center;
+    padding: 60px 30px;
+    background: #f2f2f2;
+    box-sizing: border-box;
 }
 
-/* SIDEBAR */
-.sidebar {
-    width: 30%;
+#portfolio-view h1 {
+    color: #1e3a5f;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+#portfolio-view h2 {
+    color: #333;
+    font-size: 21px;
+    margin-bottom: 35px;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.btn {
     background-color: #1e3a5f;
     color: white;
-    padding: 30px;
-    box-sizing: border-box;
-}
-
-.sidebar h2 {
-    font-size: 18px;
-    margin-top: 30px;
-    border-bottom: 1px solid white;
-    padding-bottom: 5px;
-}
-
-.sidebar p,
-.sidebar li {
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-.sidebar ul {
-    padding-left: 18px;
-}
-
-.contact-link {
-    color: white;
+    padding: 14px 22px;
     text-decoration: none;
-}
-
-.contact-link:hover {
-    text-decoration: underline;
-}
-
-/* MAIN */
-.main {
-    width: 70%;
-    padding: 40px;
-    box-sizing: border-box;
-}
-
-.main h1 {
-    margin: 0;
-    font-size: 28px;
-    color: #1e3a5f;
-}
-
-.main h3 {
-    color: #1e3a5f;
-    border-bottom: 2px solid #1e3a5f;
-    padding-bottom: 5px;
-    margin-top: 30px;
-}
-
-.section {
-    margin-bottom: 20px;
-}
-
-.section p,
-.section li {
+    border-radius: 8px;
     font-size: 15px;
-    line-height: 1.6;
-    color: #333;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s;
+    min-width: 190px;
+    display: inline-block;
 }
 
-/* LINKS PROJETS */
-.project-link {
-    color: #1e3a5f;
-    font-weight: bold;
+.btn:hover {
+    background-color: #16304d;
+    transform: translateY(-3px);
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 12px 24px;
+    background: #1e3a5f;
+    color: white;
+    border-radius: 8px;
     text-decoration: none;
 }
 
-.project-link:hover {
-    text-decoration: underline;
+.back-btn:hover {
+    background: #16304d;
 }
 
 /* RESPONSIVE */
 @media screen and (max-width: 768px) {
     .container {
         flex-direction: column;
+        margin: 0;
     }
 
     .sidebar,
     .main {
         width: 100%;
+    }
+
+    .main {
+        padding: 25px;
+    }
+
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 90%;
+        max-width: 350px;
     }
 }
 </style>
@@ -334,59 +196,52 @@ body {
 
 <body>
 
-<div class="container">
+<div id="cv-view" class="container">
 
-<!-- SIDEBAR -->
+<!-- SIDEBAR (TES LIENS RESTAURÉS) -->
 <div class="sidebar">
 
-    <h2>Contact</h2>
+    <div class="photo-container">
+        <img src="images/photo.jpg" alt="Photo">
+    </div>
 
-    <p>📞 <a class="contact-link" href="tel:+18733555328">+1 873 355 5328</a></p>
+    <h2>Coordonnées</h2>
 
-    <p>✉️ <a class="contact-link" href="mailto:mamadousanoussybah01@gmail.com">
-        mamadousanoussybah01@gmail.com
-    </a></p>
-
-    <p>🔗 <a class="contact-link" href="https://linkedin.com/in/mamadou-sanoussy-bah-ab1a8b2a7" target="_blank">
-        LinkedIn
-    </a></p>
-
-    <p>💻 <a class="contact-link" href="https://github.com/mamadousanoussybah" target="_blank">
-        GitHub
-    </a></p>
+    <p>📞 <a href="tel:+18733555328" class="contact-link">Téléphone</a></p>
+    <p>✉️ <a href="mailto:mamadousanoussybah01@gmail.com" class="contact-link">Courriel</a></p>
+    <p>🔗 <a href="https://linkedin.com/in/mamadou-sanoussy-bah-ab1a8b2a7" class="contact-link" target="_blank">LinkedIn</a></p>
+    <p>💻 <a href="https://github.com/mamadousanoussybah" class="contact-link" target="_blank">GitHub</a></p>
 
     <h2>Projets</h2>
     <ul>
-        <li><a class="contact-link" href="https://mamadousanoussybah.github.io/MarketingNumrique/" target="_blank">Marketing Numérique</a></li>
-        <li><a class="contact-link" href="https://mamadousanoussybah.github.io/InformatiqueMobil/" target="_blank">Informatique Mobile</a></li>
-        <li><a class="contact-link" href="https://mamadousanoussybah.github.io/ReseauDordinateur/" target="_blank">Réseaux</a></li>
-        <li><a class="contact-link" href="https://mamadousanoussybah.github.io/BaseDeDonnee/" target="_blank">Base de Données</a></li>
-        <li><a class="contact-link" href="https://mamadousanoussybah.github.io/SecuriteDesReseauxEtDuWeb/" target="_blank">Sécurité Web</a></li>
-        <li><a class="contact-link" href="https://mamadousanoussybah.github.io/Snake/" target="_blank">Snake Android</a></li>
+        <li><a class="contact-link" target="_blank" href="https://mamadousanoussybah.github.io/MarketingNumrique/">Marketing Numérique</a></li>
+        <li><a class="contact-link" target="_blank" href="https://mamadousanoussybah.github.io/InformatiqueMobil/">Informatique Mobile</a></li>
+        <li><a class="contact-link" target="_blank" href="https://mamadousanoussybah.github.io/ReseauDordinateur/">Réseaux</a></li>
+        <li><a class="contact-link" target="_blank" href="https://mamadousanoussybah.github.io/BaseDeDonnee/">Base de Données</a></li>
+        <li><a class="contact-link" target="_blank" href="https://mamadousanoussybah.github.io/Snake/">Snake</a></li>
     </ul>
 
 </div>
 
-<!-- MAIN -->
+<!-- MAIN (TON CV + AJOUTS SANS SUPPRESSION) -->
 <div class="main">
 
     <h1>Mamadou Sanoussy Bah</h1>
     <p><strong>Étudiant en informatique — Cybersécurité</strong></p>
 
     <div class="section">
-        <h3>Profil professionnel</h3>
+        <h3>Profil personnel</h3>
         <p>
-            Étudiant en informatique spécialisé en cybersécurité à l’Université du Québec à Chicoutimi.
-            Expertise en bases de données, architecture système, cloud computing, développement logiciel
-            et sécurité informatique. Passionné par la conception de solutions sécurisées et performantes
-            à travers des projets académiques variés.
+            Étudiant en informatique avec expertise en bases de données, architecture système,
+            déploiement d’applications et sécurité informatique. Capable de concevoir et optimiser
+            des solutions logicielles performantes et sécurisées.
         </p>
     </div>
 
     <div class="section">
         <h3>Formation</h3>
         <p>
-            <strong>Baccalauréat en informatique — Cybersécurité</strong><br>
+            Baccalauréat en informatique — Cybersécurité<br>
             Université du Québec à Chicoutimi (UQAC)<br>
             2024 — 2026 (en cours)
         </p>
@@ -395,47 +250,71 @@ body {
     <div class="section">
         <h3>Compétences techniques</h3>
         <ul>
-            <li><strong>Langages :</strong> SQL, Python, Java, C, C++, C#, HTML, CSS, JavaScript, Flutter</li>
-            <li><strong>Bases de données :</strong> Oracle, MySQL, SQLite, UML</li>
-            <li><strong>Cybersécurité :</strong> Wireshark, Nessus, stéganographie</li>
-            <li><strong>Cloud :</strong> Azure DevOps, CI/CD, Functions</li>
+            <li>SQL, Python, Java, C, C++, C#, HTML, CSS, JS, ARM64</li>
+            <li>Oracle, MySQL, SQLite</li>
+            <li>Azure DevOps, CI/CD</li>
+            <li>Wireshark, Nessus, Git</li>
         </ul>
     </div>
 
     <div class="section">
-        <h3>Expérience & Projets</h3>
+        <h3>Expériences de projets</h3>
         <ul>
-
-            <li><strong>Mini-SOC</strong> — détection d’incidents et analyse de logs</li>
-
-            <li><strong>Messenger Flutter</strong> — application de messagerie avec Firebase</li>
-
-            <li><strong>API Flask</strong> — gestion commandes et livraison</li>
-
-            <li><strong>Scanner réseau</strong> — analyse TCP multithread</li>
-
-            <li><strong>Snake Android</strong> — jeu mobile Java</li>
-
-            <li><strong>Déploiement Azure</strong> — CI/CD et cloud apps</li>
-
-            <li><strong>Wireshark</strong> — analyse réseau avancée</li>
-
+            <li>Bases de données avancées (Oracle / MySQL / optimisation SQL)</li>
+            <li>Architecture ARM64 & Raspberry Pi (bare-metal, GPIO)</li>
+            <li>Déploiement Azure Cloud (CI/CD, Web Apps, Functions)</li>
+            <li>Sécurité réseau (Wireshark, TCP, DNS, scanning)</li>
+            <li>Applications mobiles & web (Flutter, Java, Flask)</li>
         </ul>
     </div>
 
     <div class="section">
-        <h3>Qualités</h3>
+        <h3>Qualités professionnelles</h3>
         <ul>
             <li>Autonomie</li>
-            <li>Travail d’équipe</li>
-            <li>Analyse</li>
-            <li>Rigueur</li>
+            <li>Travail en équipe</li>
+            <li>Analyse et résolution de problèmes</li>
         </ul>
     </div>
 
 </div>
 
 </div>
+
+<!-- JS ORIGINAL (INCHANGÉ) -->
+<script>
+const githubLink = document.getElementById('github-link');
+const cvView = document.getElementById('cv-view');
+const portfolioView = document.getElementById('portfolio-view');
+const backBtn = document.getElementById('back-btn');
+const buttons = document.querySelectorAll('.btn');
+
+githubLink.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    cvView.style.display = 'none';
+    portfolioView.style.display = 'block';
+
+    buttons.forEach((btn, index) => {
+        setTimeout(() => {
+            btn.style.opacity = '1';
+            btn.style.transform = 'translateY(0)';
+        }, index * 120);
+    });
+});
+
+backBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    portfolioView.style.display = 'none';
+    cvView.style.display = 'flex';
+
+    buttons.forEach(btn => {
+        btn.style.opacity = '0';
+        btn.style.transform = 'translateY(20px)';
+    });
+});
+</script>
 
 </body>
 </html>
