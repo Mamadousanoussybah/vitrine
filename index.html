@@ -1,194 +1,584 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Portfolio de Mamadou Sanoussy Bah - Projets et réalisations en informatique, cybersécurité et développement."
+    >
 
     <title>Portfolio - Mamadou Sanoussy Bah</title>
 
     <style>
+
+        /* =========================
+           CONFIGURATION GÉNÉRALE
+        ========================== */
+
         * {
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
+
             font-family: Arial, Helvetica, sans-serif;
-            background: #f2f2f2;
-            color: #333;
-        }
 
-        .portfolio {
-            min-height: 100vh;
-            padding: 70px 30px;
-            text-align: center;
-        }
-
-        .portfolio h1 {
-            margin: 0 0 10px;
-            color: #1e3a5f;
-            font-size: 38px;
-        }
-
-        .portfolio h2 {
-            margin: 0 0 40px;
-            font-size: 20px;
-            font-weight: normal;
-            color: #555;
-        }
-
-        .projects-container {
-            max-width: 1000px;
-            margin: 0 auto;
-
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-
-            gap: 18px;
-        }
-
-        .btn {
-            display: inline-block;
-
-            min-width: 220px;
-            padding: 16px 24px;
-
-            background: #1e3a5f;
             color: white;
 
-            text-decoration: none;
-            border-radius: 8px;
+            min-height: 100vh;
 
-            font-size: 15px;
+            /* Arrière-plan moderne */
+            background:
+                radial-gradient(
+                    circle at 15% 20%,
+                    rgba(0, 198, 255, 0.25),
+                    transparent 35%
+                ),
+
+                radial-gradient(
+                    circle at 85% 75%,
+                    rgba(139, 92, 246, 0.30),
+                    transparent 35%
+                ),
+
+                radial-gradient(
+                    circle at 50% 100%,
+                    rgba(0, 119, 255, 0.15),
+                    transparent 40%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #071426 0%,
+                    #0d2748 40%,
+                    #162a5a 70%,
+                    #301b5c 100%
+                );
+
+            background-attachment: fixed;
+        }
+
+
+        /* =========================
+           PORTFOLIO
+        ========================== */
+
+        .portfolio {
+
+            min-height: 100vh;
+
+            padding: 90px 30px 60px;
+
+            text-align: center;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+        }
+
+
+        /* =========================
+           NOM
+        ========================== */
+
+        .portfolio h1 {
+
+            margin: 0 0 12px;
+
+            color: #ffffff;
+
+            font-size: 48px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+            text-shadow:
+                0 4px 20px rgba(0, 0, 0, 0.35);
+
+            animation: apparitionTitre 0.8s ease;
+        }
+
+
+        /* =========================
+           SOUS-TITRE
+        ========================== */
+
+        .portfolio h2 {
+
+            margin: 0 0 15px;
+
+            font-size: 22px;
+
+            font-weight: normal;
+
+            color: #d8e6f3;
+
+            animation: apparitionTitre 1s ease;
+        }
+
+
+        /* =========================
+           PETITE DESCRIPTION
+        ========================== */
+
+        .description {
+
+            max-width: 700px;
+
+            margin: 0 auto 50px;
+
+            color: #aebfd2;
+
+            font-size: 16px;
+
+            line-height: 1.7;
+
+            animation: apparitionTitre 1.2s ease;
+        }
+
+
+        /* =========================
+           CONTENEUR DES PROJETS
+        ========================== */
+
+        .projects-container {
+
+            width: 100%;
+
+            max-width: 1250px;
+
+            margin: 0 auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(240px, 1fr));
+
+            gap: 22px;
+        }
+
+
+        /* =========================
+           BOUTONS / CARTES
+        ========================== */
+
+        .btn {
+
+            min-height: 78px;
+
+            padding: 20px 22px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            background:
+                rgba(255, 255, 255, 0.10);
+
+            color: white;
+
+            border:
+                1px solid rgba(255, 255, 255, 0.20);
+
+            border-radius: 14px;
+
+            text-decoration: none;
+
+            font-size: 16px;
+
             font-weight: bold;
 
-            transition: 0.3s;
+            line-height: 1.4;
+
+            backdrop-filter: blur(12px);
+
+            -webkit-backdrop-filter: blur(12px);
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.15);
+
+            transition:
+                transform 0.3s ease,
+                background 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+
+            opacity: 0;
+
+            transform: translateY(25px);
         }
+
+
+        /* =========================
+           SURVOL DES PROJETS
+        ========================== */
 
         .btn:hover {
-            background: #16304d;
-            transform: translateY(-4px);
 
-            box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+            background:
+                rgba(255, 255, 255, 0.20);
+
+            border-color:
+                rgba(255, 255, 255, 0.50);
+
+            transform: translateY(-6px) !important;
+
+            box-shadow:
+                0 15px 35px rgba(0, 0, 0, 0.30),
+                0 0 25px rgba(0, 198, 255, 0.15);
         }
 
-        @media screen and (max-width: 768px) {
+
+        /* =========================
+           ANIMATION DU TITRE
+        ========================== */
+
+        @keyframes apparitionTitre {
+
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        /* =========================
+           PIED DE PAGE
+        ========================== */
+
+        footer {
+
+            margin-top: auto;
+
+            padding-top: 60px;
+
+            color: #94a9bf;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           VERSION TABLETTE
+        ========================== */
+
+        @media screen and (max-width: 900px) {
 
             .portfolio {
-                padding: 45px 20px;
+                padding: 70px 25px 50px;
             }
 
             .portfolio h1 {
-                font-size: 30px;
+                font-size: 40px;
             }
 
             .projects-container {
-                flex-direction: column;
-                align-items: center;
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+        }
+
+
+        /* =========================
+           VERSION MOBILE
+        ========================== */
+
+        @media screen and (max-width: 600px) {
+
+            .portfolio {
+
+                padding:
+                    50px 18px 35px;
+            }
+
+            .portfolio h1 {
+
+                font-size: 31px;
+
+                line-height: 1.2;
+            }
+
+            .portfolio h2 {
+
+                font-size: 18px;
+
+                line-height: 1.5;
+            }
+
+            .description {
+
+                font-size: 14px;
+
+                margin-bottom: 35px;
+            }
+
+            .projects-container {
+
+                grid-template-columns: 1fr;
+
+                gap: 15px;
             }
 
             .btn {
-                width: 90%;
-                max-width: 380px;
+
+                width: 100%;
+
+                min-height: 65px;
+
+                font-size: 15px;
+            }
+
+            footer {
+
+                padding-top: 45px;
             }
         }
+
     </style>
+
 </head>
+
 
 <body>
 
+
+    <!-- =========================
+         PORTFOLIO
+    ========================== -->
+
     <main class="portfolio">
 
-        <h1>Mamadou Sanoussy Bah</h1>
 
-        <h2>Portfolio — Projets et réalisations en informatique</h2>
+        <!-- NOM -->
+
+        <h1>
+            Mamadou Sanoussy Bah
+        </h1>
+
+
+        <!-- TITRE -->
+
+        <h2>
+            Portfolio — Projets et réalisations en informatique
+        </h2>
+
+
+        <!-- DESCRIPTION -->
+
+        <p class="description">
+
+            Découvrez une sélection de mes projets réalisés
+            dans les domaines du développement logiciel,
+            de la cybersécurité, des réseaux,
+            des bases de données et des technologies numériques.
+
+        </p>
+
+
+        <!-- =========================
+             PROJETS
+        ========================== -->
 
         <div class="projects-container">
+
+
+            <!-- MARKETING -->
 
             <a
                 class="btn"
                 href="https://mamadousanoussybah.github.io/MarketingNumrique/"
                 target="_blank"
+                rel="noopener noreferrer"
             >
-                Marketing Numérique
+                📊 Marketing Numérique
             </a>
+
+
+            <!-- MOBILE -->
 
             <a
                 class="btn"
                 href="https://mamadousanoussybah.github.io/InformatiqueMobil/"
                 target="_blank"
+                rel="noopener noreferrer"
             >
-                Informatique Mobile
+                📱 Informatique Mobile
             </a>
+
+
+            <!-- POO -->
 
             <a
                 class="btn"
                 href="https://mamadousanoussybah.github.io/ProgrammationOrienteObjet/"
                 target="_blank"
+                rel="noopener noreferrer"
             >
-                Programmation orientée objet
+                💻 Programmation orientée objet
             </a>
+
+
+            <!-- RÉSEAUX -->
 
             <a
                 class="btn"
                 href="https://mamadousanoussybah.github.io/ReseauDordinateur/"
                 target="_blank"
+                rel="noopener noreferrer"
             >
-                Réseaux informatiques
+                🌐 Réseaux informatiques
             </a>
+
+
+            <!-- BASES DE DONNÉES -->
 
             <a
                 class="btn"
                 href="https://mamadousanoussybah.github.io/BaseDeDonnee/"
                 target="_blank"
+                rel="noopener noreferrer"
             >
-                Bases de données
+                🗄️ Bases de données
             </a>
+
+
+            <!-- CYBERSÉCURITÉ -->
 
             <a
                 class="btn"
                 href="https://mamadousanoussybah.github.io/SecuriteDesReseauxEtDuWeb/"
                 target="_blank"
+                rel="noopener noreferrer"
             >
-                Sécurité des réseaux et du Web
+                🛡️ Sécurité des réseaux et du Web
             </a>
+
+
+            <!-- SYSTÈMES D'EXPLOITATION -->
 
             <a
                 class="btn"
                 href="https://mamadousanoussybah.github.io/SystemeDexploitation/"
                 target="_blank"
+                rel="noopener noreferrer"
             >
-                Systèmes d'exploitation
+                ⚙️ Systèmes d'exploitation
             </a>
+
+
+            <!-- ARCHITECTURE -->
 
             <a
                 class="btn"
                 href="https://mamadousanoussybah.github.io/ArchitectureDordinateur/"
                 target="_blank"
+                rel="noopener noreferrer"
             >
-                Architecture d'ordinateur
+                🖥️ Architecture d'ordinateur
             </a>
+
+
+            <!-- DÉPLOIEMENT -->
 
             <a
                 class="btn"
                 href="https://mamadousanoussybah.github.io/Deployementdapplication/"
                 target="_blank"
+                rel="noopener noreferrer"
             >
-                Déploiement d'applications
+                ☁️ Déploiement d'applications
             </a>
+
+
+            <!-- SNAKE -->
 
             <a
                 class="btn"
                 href="https://mamadousanoussybah.github.io/Snake/"
                 target="_blank"
+                rel="noopener noreferrer"
             >
-                Snake
+                🎮 Snake
             </a>
+
 
         </div>
 
+
+        <!-- =========================
+             FOOTER
+        ========================== -->
+
+        <footer>
+
+            © 2026 Mamadou Sanoussy Bah
+            — Portfolio informatique
+
+        </footer>
+
+
     </main>
 
+
+    <!-- =========================
+         ANIMATION DES PROJETS
+    ========================== -->
+
+    <script>
+
+        const buttons =
+            document.querySelectorAll('.btn');
+
+
+        window.addEventListener(
+            'DOMContentLoaded',
+            () => {
+
+                buttons.forEach(
+                    (button, index) => {
+
+                        setTimeout(
+                            () => {
+
+                                button.style.opacity = '1';
+
+                                button.style.transform =
+                                    'translateY(0)';
+
+                            },
+
+                            index * 90
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+    </script>
+
+
 </body>
+
 </html>
