@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,52 +14,48 @@
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #f2f2f2;
+            background: #f2f2f2;
             color: #333;
         }
 
-        /* =========================
-           PORTFOLIO
-        ========================== */
-
         .portfolio {
             min-height: 100vh;
-            text-align: center;
             padding: 70px 30px;
+            text-align: center;
         }
 
         .portfolio h1 {
+            margin: 0 0 10px;
             color: #1e3a5f;
             font-size: 38px;
-            margin-bottom: 10px;
         }
 
         .portfolio h2 {
-            color: #555;
-            font-size: 21px;
+            margin: 0 0 40px;
+            font-size: 20px;
             font-weight: normal;
-            margin-bottom: 45px;
+            color: #555;
         }
 
-        /* =========================
-           PROJETS
-        ========================== */
-
         .projects-container {
+            max-width: 1000px;
+            margin: 0 auto;
+
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 18px;
 
-            max-width: 1000px;
-            margin: 0 auto;
+            gap: 18px;
         }
 
         .btn {
-            background-color: #1e3a5f;
-            color: white;
+            display: inline-block;
 
+            min-width: 220px;
             padding: 16px 24px;
+
+            background: #1e3a5f;
+            color: white;
 
             text-decoration: none;
             border-radius: 8px;
@@ -68,30 +63,15 @@
             font-size: 15px;
             font-weight: bold;
 
-            min-width: 220px;
-
-            display: inline-block;
-
-            opacity: 0;
-            transform: translateY(20px);
-
-            transition:
-                opacity 0.5s ease,
-                transform 0.5s ease,
-                background-color 0.3s ease,
-                box-shadow 0.3s ease;
+            transition: 0.3s;
         }
 
         .btn:hover {
-            background-color: #16304d;
-            transform: translateY(-4px) !important;
+            background: #16304d;
+            transform: translateY(-4px);
 
-            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.15);
         }
-
-        /* =========================
-           RESPONSIVE
-        ========================== */
 
         @media screen and (max-width: 768px) {
 
@@ -101,10 +81,6 @@
 
             .portfolio h1 {
                 font-size: 30px;
-            }
-
-            .portfolio h2 {
-                font-size: 18px;
             }
 
             .projects-container {
@@ -124,11 +100,9 @@
 
     <main class="portfolio">
 
-        <h1>Bienvenue sur mon portfolio</h1>
+        <h1>Mamadou Sanoussy Bah</h1>
 
-        <h2>
-            Découvrez mes projets et réalisations en informatique
-        </h2>
+        <h2>Portfolio — Projets et réalisations en informatique</h2>
 
         <div class="projects-container">
 
@@ -136,7 +110,6 @@
                 class="btn"
                 href="https://mamadousanoussybah.github.io/MarketingNumrique/"
                 target="_blank"
-                rel="noopener noreferrer"
             >
                 Marketing Numérique
             </a>
@@ -145,7 +118,6 @@
                 class="btn"
                 href="https://mamadousanoussybah.github.io/InformatiqueMobil/"
                 target="_blank"
-                rel="noopener noreferrer"
             >
                 Informatique Mobile
             </a>
@@ -154,7 +126,6 @@
                 class="btn"
                 href="https://mamadousanoussybah.github.io/ProgrammationOrienteObjet/"
                 target="_blank"
-                rel="noopener noreferrer"
             >
                 Programmation orientée objet
             </a>
@@ -163,7 +134,6 @@
                 class="btn"
                 href="https://mamadousanoussybah.github.io/ReseauDordinateur/"
                 target="_blank"
-                rel="noopener noreferrer"
             >
                 Réseaux informatiques
             </a>
@@ -172,7 +142,6 @@
                 class="btn"
                 href="https://mamadousanoussybah.github.io/BaseDeDonnee/"
                 target="_blank"
-                rel="noopener noreferrer"
             >
                 Bases de données
             </a>
@@ -181,7 +150,6 @@
                 class="btn"
                 href="https://mamadousanoussybah.github.io/SecuriteDesReseauxEtDuWeb/"
                 target="_blank"
-                rel="noopener noreferrer"
             >
                 Sécurité des réseaux et du Web
             </a>
@@ -190,7 +158,6 @@
                 class="btn"
                 href="https://mamadousanoussybah.github.io/SystemeDexploitation/"
                 target="_blank"
-                rel="noopener noreferrer"
             >
                 Systèmes d'exploitation
             </a>
@@ -199,7 +166,6 @@
                 class="btn"
                 href="https://mamadousanoussybah.github.io/ArchitectureDordinateur/"
                 target="_blank"
-                rel="noopener noreferrer"
             >
                 Architecture d'ordinateur
             </a>
@@ -208,7 +174,6 @@
                 class="btn"
                 href="https://mamadousanoussybah.github.io/Deployementdapplication/"
                 target="_blank"
-                rel="noopener noreferrer"
             >
                 Déploiement d'applications
             </a>
@@ -217,32 +182,13 @@
                 class="btn"
                 href="https://mamadousanoussybah.github.io/Snake/"
                 target="_blank"
-                rel="noopener noreferrer"
             >
-                Jeu Snake
+                Snake
             </a>
 
         </div>
 
     </main>
 
-    <script>
-        const buttons = document.querySelectorAll('.btn');
-
-        window.addEventListener('DOMContentLoaded', () => {
-
-            buttons.forEach((button, index) => {
-
-                setTimeout(() => {
-                    button.style.opacity = '1';
-                    button.style.transform = 'translateY(0)';
-                }, index * 100);
-
-            });
-
-        });
-    </script>
-
 </body>
-
 </html>
