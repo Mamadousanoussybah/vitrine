@@ -29,14 +29,10 @@
 
         body {
             margin: 0;
-
             font-family: Arial, Helvetica, sans-serif;
-
             color: white;
-
             min-height: 100vh;
 
-            /* Arrière-plan moderne */
             background:
                 radial-gradient(
                     circle at 15% 20%,
@@ -73,17 +69,12 @@
         ========================== */
 
         .portfolio {
-
             min-height: 100vh;
-
             padding: 90px 30px 60px;
-
             text-align: center;
 
             display: flex;
-
             flex-direction: column;
-
             align-items: center;
         }
 
@@ -93,15 +84,10 @@
         ========================== */
 
         .portfolio h1 {
-
             margin: 0 0 12px;
-
             color: #ffffff;
-
             font-size: 48px;
-
             font-weight: 700;
-
             letter-spacing: 1px;
 
             text-shadow:
@@ -116,13 +102,9 @@
         ========================== */
 
         .portfolio h2 {
-
             margin: 0 0 15px;
-
             font-size: 22px;
-
             font-weight: normal;
-
             color: #d8e6f3;
 
             animation: apparitionTitre 1s ease;
@@ -130,19 +112,14 @@
 
 
         /* =========================
-           PETITE DESCRIPTION
+           DESCRIPTION
         ========================== */
 
         .description {
-
             max-width: 700px;
-
             margin: 0 auto 50px;
-
             color: #aebfd2;
-
             font-size: 16px;
-
             line-height: 1.7;
 
             animation: apparitionTitre 1.2s ease;
@@ -154,11 +131,8 @@
         ========================== */
 
         .projects-container {
-
             width: 100%;
-
             max-width: 1250px;
-
             margin: 0 auto;
 
             display: grid;
@@ -175,15 +149,11 @@
         ========================== */
 
         .btn {
-
             min-height: 78px;
-
             padding: 20px 22px;
 
             display: flex;
-
             justify-content: center;
-
             align-items: center;
 
             background:
@@ -199,13 +169,10 @@
             text-decoration: none;
 
             font-size: 16px;
-
             font-weight: bold;
-
             line-height: 1.4;
 
             backdrop-filter: blur(12px);
-
             -webkit-backdrop-filter: blur(12px);
 
             box-shadow:
@@ -218,17 +185,15 @@
                 box-shadow 0.3s ease;
 
             opacity: 0;
-
             transform: translateY(25px);
         }
 
 
         /* =========================
-           SURVOL DES PROJETS
+           SURVOL
         ========================== */
 
         .btn:hover {
-
             background:
                 rgba(255, 255, 255, 0.20);
 
@@ -244,7 +209,7 @@
 
 
         /* =========================
-           ANIMATION DU TITRE
+           ANIMATION
         ========================== */
 
         @keyframes apparitionTitre {
@@ -266,19 +231,15 @@
         ========================== */
 
         footer {
-
             margin-top: auto;
-
             padding-top: 60px;
-
             color: #94a9bf;
-
             font-size: 14px;
         }
 
 
         /* =========================
-           VERSION TABLETTE
+           TABLETTE
         ========================== */
 
         @media screen and (max-width: 900px) {
@@ -292,7 +253,6 @@
             }
 
             .projects-container {
-
                 grid-template-columns:
                     repeat(2, 1fr);
             }
@@ -300,56 +260,42 @@
 
 
         /* =========================
-           VERSION MOBILE
+           MOBILE
         ========================== */
 
         @media screen and (max-width: 600px) {
 
             .portfolio {
-
-                padding:
-                    50px 18px 35px;
+                padding: 50px 18px 35px;
             }
 
             .portfolio h1 {
-
                 font-size: 31px;
-
                 line-height: 1.2;
             }
 
             .portfolio h2 {
-
                 font-size: 18px;
-
                 line-height: 1.5;
             }
 
             .description {
-
                 font-size: 14px;
-
                 margin-bottom: 35px;
             }
 
             .projects-container {
-
                 grid-template-columns: 1fr;
-
                 gap: 15px;
             }
 
             .btn {
-
                 width: 100%;
-
                 min-height: 65px;
-
                 font-size: 15px;
             }
 
             footer {
-
                 padding-top: 45px;
             }
         }
@@ -358,32 +304,17 @@
 
 </head>
 
-
 <body>
 
-
-    <!-- =========================
-         PORTFOLIO
-    ========================== -->
-
     <main class="portfolio">
-
-
-        <!-- NOM -->
 
         <h1>
             Mamadou Sanoussy Bah
         </h1>
 
-
-        <!-- TITRE -->
-
         <h2>
             Portfolio — Projets et réalisations en informatique
         </h2>
-
-
-        <!-- DESCRIPTION -->
 
         <p class="description">
 
@@ -402,7 +333,7 @@
         <div class="projects-container">
 
 
-            <!-- MARKETING -->
+            <!-- MARKETING NUMÉRIQUE -->
 
             <a
                 class="btn"
@@ -414,7 +345,7 @@
             </a>
 
 
-            <!-- MOBILE -->
+            <!-- INFORMATIQUE MOBILE -->
 
             <a
                 class="btn"
@@ -426,7 +357,7 @@
             </a>
 
 
-            <!-- POO -->
+            <!-- PROGRAMMATION ORIENTÉE OBJET -->
 
             <a
                 class="btn"
@@ -438,7 +369,19 @@
             </a>
 
 
-            <!-- RÉSEAUX -->
+            <!-- STRUCTURES DE DONNÉES -->
+
+            <a
+                class="btn"
+                href="https://mamadousanoussybah.github.io/StructureDeDonnee/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                🧩 Structures de données
+            </a>
+
+
+            <!-- RÉSEAUX INFORMATIQUES -->
 
             <a
                 class="btn"
@@ -462,7 +405,19 @@
             </a>
 
 
-            <!-- CYBERSÉCURITÉ -->
+            <!-- BASES DE DONNÉES AVANCÉES -->
+
+            <a
+                class="btn"
+                href="https://mamadousanoussybah.github.io/BasedeDonnesAvence/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                🗃️ Bases de données avancées
+            </a>
+
+
+            <!-- SÉCURITÉ DES RÉSEAUX ET DU WEB -->
 
             <a
                 class="btn"
@@ -471,6 +426,18 @@
                 rel="noopener noreferrer"
             >
                 🛡️ Sécurité des réseaux et du Web
+            </a>
+
+
+            <!-- ÉTHIQUE INFORMATIQUE -->
+
+            <a
+                class="btn"
+                href="https://mamadousanoussybah.github.io/EthiqueInformatique/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                ⚖️ Éthique informatique
             </a>
 
 
@@ -486,7 +453,7 @@
             </a>
 
 
-            <!-- ARCHITECTURE -->
+            <!-- ARCHITECTURE D'ORDINATEUR -->
 
             <a
                 class="btn"
@@ -498,7 +465,7 @@
             </a>
 
 
-            <!-- DÉPLOIEMENT -->
+            <!-- DÉPLOIEMENT D'APPLICATIONS -->
 
             <a
                 class="btn"
@@ -535,7 +502,6 @@
             — Portfolio informatique
 
         </footer>
-
 
     </main>
 
@@ -577,7 +543,6 @@
         );
 
     </script>
-
 
 </body>
 
